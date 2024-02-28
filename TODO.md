@@ -1,9 +1,5 @@
 ## TODO
 
-**samples/samplespython**
-
-    Implement python learning samples.
-
 **algods/numeric**
 
     Implement spherical-harmonics
