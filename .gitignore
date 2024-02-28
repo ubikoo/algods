@@ -1,0 +1,39 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+# External dependencies and build directory
+3rdparty
+build
+
+# Compiled C/C++ files
+*.o
+*.d
+*.a
+*.so
+
+# Compiled Java files
+*.class
+*.jar
+
+# Compiled Python files
+*.py[cod]
+
+# Compiled LaTeX and Logs
+*.aux
+*.blg
+*.bbl
+*.log
+*.out
+*.tui
+*.top
+*.synctex.gz
+*.pdf
+
+# Various files
+.DS_Store
+.tags
+.vscode
+*.code-workspace
+TEST*.xml
+# *.png
+# *.jpg
+# *.tiff
