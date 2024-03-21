@@ -1,15 +1,11 @@
 #!/usr/bin/env gnuplot
 
-#
 # file.gplot
 #
 # Copyright (c) 2020 Carlos Braga
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the MIT License.
-#
-# See accompanying LICENSE.md or https://opensource.org/licenses/MIT.
-#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the MIT License. See accompanying LICENSE.md or
+# https://opensource.org/licenses/MIT.
 
 # -----------------------------------------------------------------------------
 ## graphics output
@@ -26,11 +22,8 @@ set terminal wxt  persist size 640,480 position 0,24 enhanced font 'helvetica,14
 # set output 'figure.tex'
 reset
 
-
-
 # -----------------------------------------------------------------------------
 # plot ode error trajectories
-#
 set size    1.0, 1.0
 set origin  0.0, 0.0
 set samples 1000
@@ -46,15 +39,11 @@ set key bottom right
 
 unset key
 
-
-#
 # set data files prefix
-#
 prefix = "/tmp"
 
 # -----------------------------------------------------------------------------
 #  t  x(0)  x(1)  e1  x  v  e2
-#
 set term wxt 0
 set title "non oscillatory spring e1 - e2"
 show title
@@ -79,7 +68,6 @@ plot sprintf("%s/out.euler%d", prefix, 3) u ($1):($4-$7) w l lw 0.5 lc rgb 'dark
      sprintf("%s/out.kutta%d", prefix, 3) u ($1):($4-$7) w p ps 0.1 lc rgb 'dark-blue', \
      sprintf("%s/out.gear%d",  prefix, 3) u ($1):($4-$7) w p ps 0.1 lc rgb 'dark-yellow'
 
-
 # -----------------------------------------------------------------------------
 #  t  x(0)  x(1)  e1  x  v  e2
 set term wxt 3
@@ -102,7 +90,6 @@ show title
 plot sprintf("%s/out.gauss%d", prefix, 3) u ($1):($4-$7) w p lw 0.5 lc rgb 'red', \
      sprintf("%s/out.kutta%d", prefix, 3) u ($1):($4-$7) w p ps 0.1 lc rgb 'dark-green', \
      sprintf("%s/out.gear%d",  prefix, 3) u ($1):($4-$7) w p ps 0.1 lc rgb 'dark-yellow'
-
 
 # -----------------------------------------------------------------------------
 #  t  x(0)  x(1)  e1  x  v  e2

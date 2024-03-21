@@ -3,9 +3,9 @@
 # path_dijkstra.py
 #
 # Copyright (c) 2020 Carlos Braga
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the MIT License.
-# See accompanying LICENSE.md or https://opensource.org/licenses/MIT.
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the MIT License. See accompanying LICENSE.md or
+# https://opensource.org/licenses/MIT.
 
 from multiprocessing import spawn
 import sys

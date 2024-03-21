@@ -1,15 +1,11 @@
 #!/usr/bin/env gnuplot
 
-#
 # file.gplot
 #
 # Copyright (c) 2020 Carlos Braga
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the MIT License.
-#
-# See accompanying LICENSE.md or https://opensource.org/licenses/MIT.
-#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the MIT License. See accompanying LICENSE.md or
+# https://opensource.org/licenses/MIT.
 
 # -----------------------------------------------------------------------------
 ## graphics output
@@ -25,8 +21,6 @@ set terminal wxt  persist size 640,480 position 0,24 enhanced font 'helvetica,14
 #\\newcommand{\\ft}[0]{\\footnotesize}"
 # set output 'figure.tex'
 reset
-
-
 
 # -----------------------------------------------------------------------------
 ## plot uniform distribution
@@ -48,7 +42,6 @@ unset key
 set term wxt 0
 plot '/tmp/out.hist1d_kiss_urand' u 1:3 w l lw 1.0, \
      '/tmp/out.hist1d_cmwc_urand' u 1:3 w l lw 1.0
-
 
 # -----------------------------------------------------------------------------
 ## plot normal distribution
