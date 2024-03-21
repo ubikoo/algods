@@ -33,6 +33,7 @@ build
 .tags
 .vscode
 *.code-workspace
+*.venv
 TEST*.xml
 # *.png
 # *.jpg
