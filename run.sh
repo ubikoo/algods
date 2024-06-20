@@ -39,13 +39,13 @@ do_clean() {
 do_build() {
     mkdir build
     pushd build
-    cmake .. && make -j16 all
+    cmake -DCMAKE_BUILD_TYPE="Debug" .. && make -j16 all
     popd
 }
 
 do_execute() {
     dir="$1"
-    target="$2"
+    target="./$1"
     pushd "$dir"
     run "$target"
     popd
@@ -53,7 +53,7 @@ do_execute() {
 
 do_execute_mpi() {
     dir="$1"
-    target="$2"
+    target="./$1"
     pushd "$dir"
     run mpirun --mca shmem posix --use-hwthread-cpus -np 16 "$target"
     popd
@@ -88,12 +88,12 @@ done
 [[ $DO_BUILD == "true" ]] && do_build
 if [[ $DO_EXECUTE == "true" ]]; then
     pushd build/algods
-    do_execute arrays                               ./arrays
-    do_execute hashing                              ./hashing
-    do_execute linked                               ./linked
-    do_execute sorting                              ./sorting
-    do_execute searching                            ./searching
-    do_execute unionfind                            ./unionfind
-    do_execute numeric                              ./numeric
+    do_execute arrays
+    do_execute hashing
+    do_execute linked
+    do_execute sorting
+    do_execute searching
+    do_execute unionfind
+    do_execute numeric
     popd
 fi
